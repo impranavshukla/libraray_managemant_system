@@ -1,0 +1,124 @@
+.mybooks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* PAGE HEADER */
+.page-header h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  color: gray;
+}
+
+/* SUMMARY CARDS */
+.summary-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.summary-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2a5298;
+}
+
+/* TABLE */
+.table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #2a5298;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: white;
+}
+
+.issued {
+  background: #2196f3;
+}
+
+.returned {
+  background: #4caf50;
+}
+
+/* BUTTONS */
+.return-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #2a5298;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.return-btn:hover {
+  background: #1e3c72;
+}
+
+.disabled-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #aaa;
+  color: white;
+  cursor: not-allowed;
+}

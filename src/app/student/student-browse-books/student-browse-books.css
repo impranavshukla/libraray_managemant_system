@@ -1,0 +1,131 @@
+.browse-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* HEADER */
+.browse-header h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.browse-header p {
+  color: gray;
+}
+
+/* FILTER SECTION */
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-box input {
+  width: 280px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #2a5298;
+}
+
+.filter-box select {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* BOOK GRID */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* BOOK CARD */
+.book-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+}
+
+.book-cover {
+  height: 130px;
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.author {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.genre {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+
+.status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.available {
+  background: #4caf50;
+}
+
+.issued {
+  background: #f44336;
+}
+
+.view-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: #2a5298;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #1e3c72;
+}
+
+.view-btn.disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
