@@ -27,7 +27,7 @@ export const routes: Routes = [
       
       { path: 'home', component: AdminHome },
       { path: 'books', component: AdminAddBook },
-      { path: 'students', component: AdminViewBook},
+      { path: 'view-books', component: AdminViewBook},
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },

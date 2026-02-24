@@ -1,19 +1,15 @@
 .view-book-container {
-
   padding: 30px;
   font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
   min-height: 80vh;
+  background-color: #f4f6f9;
 }
 
-/* Heading */
-
-.view-book-container h2 {
+h2 {
   margin-bottom: 20px;
 }
 
 /* Table */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -21,33 +17,22 @@ table {
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Table Header */
-
 thead {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   color: white;
 }
 
-th {
+th, td {
   padding: 12px;
   text-align: left;
-}
-
-/* Table Data */
-
-td {
-  padding: 12px;
   border-bottom: 1px solid #ddd;
 }
-
-/* Hover Effect */
 
 tr:hover {
   background-color: #f1f1f1;
 }
 
 /* Buttons */
-
 .edit-btn {
   background: #3498db;
   border: none;
@@ -67,12 +52,6 @@ tr:hover {
   cursor: pointer;
 }
 
-/* Hover */
-
-.edit-btn:hover {
-  opacity: 0.9;
-}
-
-.delete-btn:hover {
+.edit-btn:hover, .delete-btn:hover {
   opacity: 0.9;
 }

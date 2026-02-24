@@ -1,9 +1,6 @@
 <div class="view-book-container">
-
   <h2>All Books 📚</h2>
-
   <table>
-
     <thead>
       <tr>
         <th>ID</th>
@@ -14,36 +11,21 @@
         <th>Actions</th>
       </tr>
     </thead>
-
     <tbody>
-
-      <!-- Example Data -->
-      <tr>
-        <td>1</td>
-        <td>Java Programming</td>
-        <td>James Gosling</td>
-        <td>Programming</td>
-        <td>10</td>
-        <td>
-          <button class="edit-btn">Edit</button>
-          <button class="delete-btn">Delete</button>
-        </td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>Data Structures</td>
-        <td>Mark Allen</td>
-        <td>Computer Science</td>
-        <td>8</td>
-        <td>
-          <button class="edit-btn">Edit</button>
-          <button class="delete-btn">Delete</button>
-        </td>
-      </tr>
-
+      <!-- use @for with signal -->
+      @for(book of books(); track book.id){
+        <tr>
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.category }}</td>
+          <td>{{ book.quantity }}</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn" (click)="deleteBook(book.id)">Delete</button>
+          </td>
+        </tr>
+      }
     </tbody>
-
   </table>
-
 </div>

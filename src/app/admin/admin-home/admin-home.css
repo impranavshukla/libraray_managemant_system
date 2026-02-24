@@ -1,60 +1,64 @@
-.admin-home {
-  padding: 30px;
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
-  min-height: 80vh;
+.container{
+
+padding:30px;
+
 }
 
-/* Welcome Box */
+.title{
 
-.welcome-box {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: white;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+text-align:center;
+margin-bottom:30px;
+color:#333;
+font-size:28px;
+
 }
 
-.welcome-box h1 {
-  margin-bottom: 10px;
+.card-container{
+
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+
 }
 
-.welcome-box p {
-  font-size: 16px;
+.card{
+
+width:260px;
+padding:15px;
+border-radius:15px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+background:white;
+transition:0.3s;
+text-align:center;
+
 }
 
-/* Cards */
+.card:hover{
 
-.dashboard-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+transform:translateY(-5px);
+
 }
 
-/* Individual Card */
+.book-img{
 
-.card {
-  flex: 1;
-  min-width: 220px;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: 0.3s;
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+
 }
 
-/* Hover Effect */
+h3{
 
-.card:hover {
-  transform: translateY(-5px);
+margin-top:10px;
+color:#222;
+
 }
 
-/* Numbers */
+p{
 
-.number {
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #3498db;
+margin:6px 0;
+color:#666;
+
 }
