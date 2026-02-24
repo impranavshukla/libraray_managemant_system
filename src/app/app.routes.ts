@@ -10,7 +10,7 @@ import { AdminDashboard } from './admin/admin-dashboard/admin-dashboard';
 
 export const routes: Routes = [
     {
-    path: '',
+    path: 'student',
     component: StudentDashboard,
     children: [
       { path: 'home', component: StudentHome},

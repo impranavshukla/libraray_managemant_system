@@ -29,41 +29,30 @@
   <!-- BOOK GRID -->
   <div class="book-grid">
 
-    <div class="book-card">
-      <div class="book-cover"></div>
-      <h3>The Silent Patient</h3>
-      <p class="author">Alex Michaelides</p>
-      <span class="genre">Mystery</span>
-      <span class="status available">Available</span>
-      <button class="view-btn">View Details</button>
-    </div>
+    @for(book of bookList(); track book.id){
+    <div class="book-card" >
+  
+  <img [src]="book.thumbnail" class="book-cover" alt="{{book.title}}">
 
-    <div class="book-card">
-      <div class="book-cover"></div>
-      <h3>Atomic Habits</h3>
-      <p class="author">James Clear</p>
-      <span class="genre">Self-Help</span>
-      <span class="status available">Available</span>
-      <button class="view-btn">View Details</button>
-    </div>
+  <h3>{{book.title}}</h3>
+  <p class="author">{{book.author}}</p>
+  <span class="genre">{{book.genre}}</span>
 
-    <div class="book-card">
-      <div class="book-cover"></div>
-      <h3>Deep Work</h3>
-      <p class="author">Cal Newport</p>
-      <span class="genre">Productivity</span>
-      <span class="status issued">Issued</span>
-      <button class="view-btn disabled">Not Available</button>
-    </div>
+  <span 
+    class="status" 
+    [ngClass]="book.availableCopies > 0 ? 'available' : 'issued'">
+    {{ book.availableCopies > 0 ? 'Available' : 'Issued' }}
+  </span>
 
-    <div class="book-card">
-      <div class="book-cover"></div>
-      <h3>The Alchemist</h3>
-      <p class="author">Paulo Coelho</p>
-      <span class="genre">Fiction</span>
-      <span class="status available">Available</span>
-      <button class="view-btn">View Details</button>
-    </div>
+  <button 
+    class="view-btn"
+    [disabled]="book.availableCopies === 0">
+    {{ book.availableCopies > 0 ? 'View Details' : 'Not Available' }}
+  </button>
+
+</div>
+    }
+
 
   </div>
 
