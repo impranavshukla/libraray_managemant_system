@@ -1,5 +1,6 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { AdminService } from '../../services/admin';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-view-book',
@@ -10,7 +11,7 @@ export class AdminViewBook implements OnInit {
 
   books = signal<any[]>([]); 
 
-  constructor(private bookService: AdminService) {}
+  constructor(private bookService: AdminService, private router:Router) {}
 
   ngOnInit(): void {
     this.loadBooks();
@@ -30,4 +31,9 @@ export class AdminViewBook implements OnInit {
       });
     
   }
+
+  editBook(id:any){
+ this.router.navigate(['/admin-edit-book',id]);
+}
+
 }

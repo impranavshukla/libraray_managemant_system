@@ -9,7 +9,8 @@
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ff6ec7, #7f00ff); 
+    background:linear-gradient(135deg,#bbdefb,#2196f3,#0d47a1);
+
    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
   display: flex;
   justify-content: center;

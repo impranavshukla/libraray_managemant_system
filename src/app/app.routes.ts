@@ -11,6 +11,7 @@ import { Signup } from './components/signup/signup';
 import { Login } from './components/login/login';
 import { AdminGuard } from './guards/auth-guard';
 import { StudentGuard } from './guards/student-guard';
+import { AdminEditBook } from './admin/admin-edit-book/admin-edit-book';
 
 export const routes: Routes = [
   
@@ -29,11 +30,11 @@ export const routes: Routes = [
     component: Signup,
   },
 
-  // Student Routes (Protected)
+  
   {
     path: 'student',
     component: StudentDashboard,
-    canActivate: [StudentGuard],  // Only students can enter
+    canActivate: [StudentGuard],  
     children: [
       { path: 'home', component: StudentHome },
       { path: 'browse', component: StudentBrowseBooks },
@@ -42,20 +43,27 @@ export const routes: Routes = [
     ],
   },
 
-  // Admin Routes (Protected)
+  
   {
     path: 'admin',
     component: AdminDashboard,
-    canActivate: [AdminGuard], // Only admins can enter
+    canActivate: [AdminGuard], 
     children: [
       { path: 'home', component: AdminHome },
       { path: 'books', component: AdminAddBook },
       { path: 'view-books', component: AdminViewBook },
+      
       { path: '', redirectTo: 'home', pathMatch: 'full' },
     ],
   },
 
-  // Wildcard route -> redirect to login
+  {
+      path:'admin-edit-book/:id',
+     component:AdminEditBook,
+     canActivate:[AdminGuard]
+},
+
+  
   {
     path: '**',
     redirectTo: '/login',

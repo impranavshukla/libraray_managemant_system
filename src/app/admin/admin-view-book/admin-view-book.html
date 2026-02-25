@@ -21,7 +21,7 @@
           <td>{{ book.category }}</td>
           <td>{{ book.quantity }}</td>
           <td>
-            <button class="edit-btn">Edit</button>
+            <button class="edit-btn" (click)="editBook(book.id)">Edit</button>
             <button class="delete-btn" (click)="deleteBook(book.id)">Delete</button>
           </td>
         </tr>

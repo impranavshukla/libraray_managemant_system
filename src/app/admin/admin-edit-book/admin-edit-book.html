@@ -1,0 +1,35 @@
+<div class ="admin-edit-book">
+<div class="form-container">
+
+<h2>Edit Book 📚</h2>
+
+<form (ngSubmit)="updateBook()">
+
+<input type="text"
+[(ngModel)]="book.title"
+name="title"
+placeholder="Book Title">
+
+<input type="text"
+[(ngModel)]="book.author"
+name="author"
+placeholder="Author">
+
+<input type="text"
+[(ngModel)]="book.category"
+name="category"
+placeholder="Category">
+
+<input type="number"
+[(ngModel)]="book.quantity"
+name="quantity"
+placeholder="Quantity">
+
+<button type="submit">
+Update Book
+</button>
+
+</form>
+
+</div>
+</div>
