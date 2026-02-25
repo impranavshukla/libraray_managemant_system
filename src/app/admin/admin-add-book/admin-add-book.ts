@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AdminService } from '../../services/admin-service';
+import { AdminService } from '../../services/admin';
 
 @Component({
   selector: 'app-add-book',

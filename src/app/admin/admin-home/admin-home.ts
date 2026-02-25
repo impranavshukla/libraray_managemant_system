@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, signal } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { AdminService } from '../../services/admin-service';
+import { AdminService } from '../../services/admin';
 
 @Component({
   selector: 'app-admin-home',

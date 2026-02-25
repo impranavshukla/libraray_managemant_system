@@ -1,0 +1,16 @@
+<div class="header">
+ 
+<div class="container">
+  <h2>Login</h2>
+  <form [formGroup]="loginData" (ngSubmit)="onLogin()">
+
+    <input type="email" placeholder="Email" formControlName="email">
+    <input type="password" placeholder="Password" formControlName="password">
+
+    <button type="submit">Login</button>
+  </form>
+
+  <br>
+  <a routerLink="/signup">Signup</a>
+</div>
+</div>

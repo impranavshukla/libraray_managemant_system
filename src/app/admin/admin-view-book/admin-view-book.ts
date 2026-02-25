@@ -1,5 +1,5 @@
 import { Component, signal, OnInit } from '@angular/core';
-import { AdminService } from '../../services/admin-service';
+import { AdminService } from '../../services/admin';
 
 @Component({
   selector: 'app-admin-view-book',
@@ -10,7 +10,7 @@ export class AdminViewBook implements OnInit {
 
   books = signal<any[]>([]); 
 
-  constructor(private bookService: AdminService) { }
+  constructor(private bookService: AdminService) {}
 
   ngOnInit(): void {
     this.loadBooks();
